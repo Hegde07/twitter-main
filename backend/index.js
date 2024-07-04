@@ -24,6 +24,10 @@ const corsOptions = {
 }
 app.use(cors(corsOptions));
 
+app.get('/',(req,res)=>{
+    res.json("Hello")
+})
+
 // api
 app.use("/api/v1/user",userRoute);
 app.use("/api/v1/tweet", tweetRoute);
